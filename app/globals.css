@@ -1,0 +1,192 @@
+﻿@import "tailwindcss";
+
+:root {
+  --background: #f5efe6;
+  --foreground: #1d1a17;
+  --card: rgba(255, 250, 245, 0.82);
+  --card-strong: rgba(255, 249, 240, 0.96);
+  --border: rgba(89, 69, 52, 0.14);
+  --muted: #6f685f;
+  --primary: #8b2e27;
+  --primary-foreground: #fff9f2;
+  --secondary: #d5b06f;
+  --accent: #7b8b79;
+  --ring: rgba(139, 46, 39, 0.35);
+  --shadow: 0 24px 80px rgba(52, 36, 24, 0.08);
+  --shadow-strong: 0 26px 90px rgba(45, 27, 17, 0.14);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-strong: var(--card-strong);
+  --color-border: var(--border);
+  --color-muted: var(--muted);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-ring: var(--ring);
+  --font-sans: var(--font-noto-sans-sc);
+  --font-serif: var(--font-noto-serif-sc);
+}
+
+* {
+  border-color: var(--border);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top, rgba(212, 176, 111, 0.18), transparent 34%),
+    radial-gradient(circle at 80% 12%, rgba(123, 139, 121, 0.12), transparent 26%),
+    linear-gradient(180deg, #f8f2e9 0%, #f5efe6 40%, #efe6da 100%);
+  color: var(--foreground);
+  font-family: var(--font-noto-sans-sc), sans-serif;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 72px 72px;
+  opacity: 0.16;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background: rgba(139, 46, 39, 0.18);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: -0.02em;
+}
+
+@keyframes shimmerFlow {
+  0% {
+    transform: translateX(-35%) scaleX(0.92);
+    opacity: 0.2;
+  }
+  50% {
+    transform: translateX(8%) scaleX(1.05);
+    opacity: 0.42;
+  }
+  100% {
+    transform: translateX(42%) scaleX(0.96);
+    opacity: 0.18;
+  }
+}
+
+@keyframes lanternFloat {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes grainShift {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 160px 120px;
+  }
+}
+
+@layer base {
+  p {
+    text-wrap: pretty;
+  }
+}
+
+@layer components {
+  .shell {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .panel {
+    @apply rounded-[28px] border border-white/45 bg-[color:var(--card)] backdrop-blur-xl;
+    box-shadow: var(--shadow);
+  }
+
+  .panel-strong {
+    @apply rounded-[32px] border border-white/50 bg-[color:var(--card-strong)] backdrop-blur-xl;
+    box-shadow: var(--shadow-strong);
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full border border-[color:var(--border)] bg-white/70 px-3 py-1 text-xs tracking-[0.22em] text-[color:var(--muted)] uppercase;
+  }
+
+  .ink-title {
+    @apply font-serif text-[color:var(--foreground)];
+  }
+
+  .section-space {
+    @apply py-12 sm:py-16 lg:py-20;
+  }
+
+  .editorial-grid {
+    @apply grid gap-6 lg:grid-cols-[1.05fr_0.95fr];
+  }
+
+  .paper-grain {
+    background-image:
+      radial-gradient(circle at 20% 20%, rgba(255, 250, 244, 0.22) 0, transparent 18%),
+      radial-gradient(circle at 80% 0%, rgba(212, 176, 111, 0.16) 0, transparent 24%),
+      radial-gradient(circle at 50% 100%, rgba(123, 139, 121, 0.1) 0, transparent 22%),
+      radial-gradient(circle, rgba(29, 26, 23, 0.045) 1px, transparent 1px);
+    background-size: auto, auto, auto, 18px 18px;
+    animation: grainShift 18s linear infinite;
+  }
+
+  .river-shimmer {
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(255, 234, 187, 0.18) 18%,
+      rgba(255, 243, 215, 0.52) 44%,
+      rgba(255, 214, 136, 0.2) 72%,
+      transparent 100%
+    );
+    animation: shimmerFlow 12s linear infinite;
+    filter: blur(10px);
+    mix-blend-mode: screen;
+  }
+
+  .lantern-glow {
+    animation: lanternFloat 6s ease-in-out infinite;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .paper-grain,
+  .river-shimmer,
+  .lantern-glow {
+    animation: none !important;
+  }
+}
