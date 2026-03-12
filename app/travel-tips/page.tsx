@@ -25,7 +25,7 @@ export default function TravelTipsPage() {
   return (
     <>
       <PageHero
-        eyebrow="Travel Tips"
+        eyebrow="出行指南"
         title="把出发前真正需要知道的事集中看完"
         description="这一页优先回答最影响决策的问题：怎么到、什么时候去、住哪里更顺、第一次来应该怎么安排。"
         meta={["交通建议", "住宿片区", "季节提醒"]}

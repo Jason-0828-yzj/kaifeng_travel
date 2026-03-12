@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 
 export function ItineraryCard({ itinerary }: { itinerary: Itinerary }) {
   return (
-    <article className="panel overflow-hidden">
+    <article className="panel-strong overflow-hidden">
       <div className="relative h-56">
         <Image src={itinerary.coverImage} alt={itinerary.title} fill className="object-cover" />
       </div>

@@ -9,9 +9,9 @@ export function MapPlaceholder() {
           <MapPinned className="h-6 w-6" />
         </div>
         <div className="space-y-2">
-          <h3 className="ink-title text-xl">地图模块预留</h3>
+          <h3 className="ink-title text-xl">行程区域提示</h3>
           <p className="text-sm leading-7 text-[color:var(--muted)]">
-            当前版本先提供路线理解与区域提示，后续可接入高德地图或其他地图服务，实现实时导航与片区标注。
+            初次来开封，优先围绕鼓楼、龙亭湖、清明上河园周边理解片区关系，会比单纯看点位更容易安排行程。
           </p>
         </div>
       </div>

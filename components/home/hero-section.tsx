@@ -13,7 +13,7 @@ export function HeroSection() {
       <Container>
         <div className="editorial-grid items-center gap-8 lg:gap-10">
           <Reveal className="space-y-8">
-            <span className="eyebrow">Kaifeng Travel Editorial</span>
+            <span className="eyebrow">开封旅行提要</span>
             <div className="space-y-5">
               <h1 className="ink-title max-w-3xl text-5xl leading-[1.02] sm:text-6xl lg:text-7xl">{homeHero.title}</h1>
               <p className="max-w-2xl text-base leading-8 text-[color:var(--muted)] sm:text-lg">{homeHero.subtitle}</p>
@@ -44,7 +44,7 @@ export function HeroSection() {
               <div className="relative h-[470px] overflow-hidden rounded-[26px] sm:h-[560px]">
                 <Image
                   src="/images/kaifeng/hero/kaifeng-hero-main.svg"
-                  alt="开封主视觉占位图"
+                  alt="开封旅行主视觉"
                   fill
                   className="object-cover"
                   priority
@@ -52,11 +52,11 @@ export function HeroSection() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[rgba(21,17,13,0.68)] via-[rgba(21,17,13,0.1)] to-transparent" />
                 <div className="absolute left-5 right-5 top-5 flex items-start justify-between gap-4 sm:left-6 sm:right-6 sm:top-6">
                   <div className="rounded-[20px] bg-white/14 px-4 py-3 text-white backdrop-blur-md">
-                    <p className="text-xs tracking-[0.18em] text-white/70 uppercase">Travel Focus</p>
+                    <p className="text-xs tracking-[0.18em] text-white/70 uppercase">旅行重点</p>
                     <p className="mt-1 text-sm font-medium">宋韵氛围、路线效率、夜游记忆点</p>
                   </div>
                   <div className="hidden rounded-[20px] bg-white/14 px-4 py-3 text-right text-white backdrop-blur-md sm:block">
-                    <p className="text-xs tracking-[0.18em] text-white/70 uppercase">Editorial Pick</p>
+                    <p className="text-xs tracking-[0.18em] text-white/70 uppercase">编辑建议</p>
                     <p className="mt-1 text-sm font-medium">第一次来，建议先住一晚</p>
                   </div>
                 </div>

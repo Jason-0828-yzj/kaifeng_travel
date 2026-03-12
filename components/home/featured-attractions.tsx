@@ -14,7 +14,7 @@ export function FeaturedAttractions() {
       <Container>
         <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
           <SectionHeading
-            eyebrow="Featured"
+            eyebrow="精选景点"
             title="先从这 6 站开始理解开封"
             description="它们足够代表开封，也足够适合第一次来的人快速建立判断：哪些景点适合白天，哪些更适合留到夜里。"
           />

@@ -9,13 +9,13 @@ export function NightTourSection() {
   return (
     <section className="py-12 sm:py-16">
       <Container>
-        <div className="panel overflow-hidden">
+        <div className="panel-strong overflow-hidden">
           <div className="grid gap-0 lg:grid-cols-[0.92fr_1.08fr]">
             <div className="relative min-h-[320px]">
-              <Image src="/images/kaifeng/hero/night-river.svg" alt="开封夜游主视觉占位图" fill className="object-cover" />
+              <Image src="/images/kaifeng/hero/night-river.svg" alt="开封夜游水岸夜景" fill className="object-cover" />
             </div>
             <div className="space-y-6 p-8 sm:p-10 lg:p-12">
-              <span className="eyebrow">Night Experience</span>
+              <span className="eyebrow">夜游看点</span>
               <div className="space-y-4">
                 <h2 className="ink-title text-3xl leading-tight sm:text-4xl">{nightExperience.title}</h2>
                 <p className="text-sm leading-8 text-[color:var(--muted)] sm:text-base">{nightExperience.description}</p>

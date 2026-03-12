@@ -7,24 +7,26 @@ export function PageHero({
   title,
   description,
   meta,
-  children
+  children,
+  compact = true
 }: {
   eyebrow?: string;
   title: string;
   description: string;
   meta?: string[];
   children?: ReactNode;
+  compact?: boolean;
 }) {
   return (
-    <section className="pb-10 pt-24 sm:pb-14 sm:pt-32 lg:pb-16">
+    <section className={compact ? "pb-8 pt-24 sm:pb-10 sm:pt-28 lg:pb-12" : "pb-10 pt-24 sm:pb-14 sm:pt-32 lg:pb-16"}>
       <Container>
-        <div className="panel-strong overflow-hidden p-8 sm:p-10 lg:p-14">
-          <div className="grid gap-10 lg:grid-cols-[1.25fr_0.75fr] lg:items-end">
-            <div className="space-y-7">
+        <div className="panel-strong overflow-hidden p-6 sm:p-8 lg:p-10">
+          <div className="grid gap-6 lg:grid-cols-[1.25fr_0.75fr] lg:items-end">
+            <div className="space-y-5">
               {eyebrow ? <span className="eyebrow">{eyebrow}</span> : null}
-              <div className="space-y-4">
-                <h1 className="ink-title max-w-3xl text-4xl leading-tight sm:text-5xl lg:text-6xl">{title}</h1>
-                <p className="max-w-2xl text-base leading-8 text-[color:var(--muted)]">{description}</p>
+              <div className="space-y-3">
+                <h1 className="ink-title max-w-3xl text-3xl leading-tight sm:text-4xl lg:text-5xl">{title}</h1>
+                <p className="max-w-2xl text-sm leading-7 text-[color:var(--muted)] sm:text-base sm:leading-8">{description}</p>
               </div>
               {meta?.length ? (
                 <div className="flex flex-wrap gap-3">
@@ -34,7 +36,7 @@ export function PageHero({
                 </div>
               ) : null}
             </div>
-            {children ? <div className="rounded-[28px] border border-white/50 bg-white/66 p-6 shadow-sm">{children}</div> : null}
+            {children ? <div className="rounded-[24px] border border-white/50 bg-white/66 p-5 shadow-sm lg:p-6">{children}</div> : null}
           </div>
         </div>
       </Container>

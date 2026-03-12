@@ -157,8 +157,8 @@ export const footerContent = {
   statement:
     "汴京行旅以现代旅行视角整理开封体验，帮助第一次到访的游客更快找到适合自己的节奏。",
   quickLinks: navigation,
-  contactLabel: "内容与合作",
-  contact: "欢迎在部署后替换为你的邮箱、公众号或作品集入口",
-  social: ["微博 / 小红书 / 微信服务号入口可后续接入", "当前版本保留静态前端展示导向"],
+  contactLabel: "站点信息",
+  contact: "本网站聚焦开封旅行灵感、路线建议与城市体验整理，适合作为出发前的轻量参考。",
+  social: ["内容涵盖景点、路线、美食与夜游建议", "请以景区官方信息为准，灵活安排行程"],
   copyright: "Copyright © 2026 汴京行旅"
 };

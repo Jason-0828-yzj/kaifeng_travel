@@ -11,7 +11,7 @@ export function TipsSection() {
       <Container>
         <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
           <SectionHeading
-            eyebrow="Practical"
+            eyebrow="出行提示"
             title="做决定前，先看这几条就够了"
             description="如果是第一次来开封，不必先读很多攻略。先用几条高频问题建立判断，再去选景点和路线会更轻松。"
           />

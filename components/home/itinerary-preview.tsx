@@ -12,7 +12,7 @@ export function ItineraryPreview() {
       <Container>
         <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
           <SectionHeading
-            eyebrow="Routes"
+            eyebrow="推荐路线"
             title="三条路线，先帮你决定怎么逛"
             description="如果还没想好顺序，可以直接从现成路线开始。它们分别对应经典打卡、家庭轻松与夜游美食三种需求。"
           />

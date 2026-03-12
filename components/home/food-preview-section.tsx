@@ -10,7 +10,7 @@ export function FoodPreviewSection() {
       <Container>
         <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
           <SectionHeading
-            eyebrow="Food"
+            eyebrow="美食线索"
             title="在开封，吃本身就是旅行体验的一部分"
             description="这里的味道不只是菜名，更是动线的一部分。正餐、小吃、夜市和临时补给，都能自然嵌进一天的行程里。"
           />

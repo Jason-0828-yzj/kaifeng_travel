@@ -12,8 +12,8 @@ export function SiteFooter() {
               <p className="ink-title text-2xl">{siteConfig.name}</p>
               <p className="max-w-md text-sm leading-7 text-[color:var(--muted)]">{footerContent.statement}</p>
               <div className="rounded-[20px] bg-white/70 px-4 py-4 text-sm leading-7 text-[color:var(--muted)]">
-                <p className="font-medium text-[color:var(--foreground)]">站点说明</p>
-                <p className="mt-2">当前版本基于本地 mock data 构建，适合静态部署和作品集展示，后续可平滑接入 CMS 或多语言内容源。</p>
+                <p className="font-medium text-[color:var(--foreground)]">内容说明</p>
+                <p className="mt-2">站内信息以旅行灵感、路线整理与实用提示为主，适合在出发前快速建立对开封的整体判断。</p>
               </div>
             </div>
             <div className="space-y-4">

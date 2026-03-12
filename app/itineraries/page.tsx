@@ -17,7 +17,7 @@ export default function ItinerariesPage() {
   return (
     <>
       <PageHero
-        eyebrow="Itineraries"
+        eyebrow="路线选择"
         title="不必自己拼，从现成路线开始更快"
         description="如果你还没决定先去哪里，直接选一条路线会更轻松。下面三条分别照顾第一次来、家庭同行和偏爱夜景美食的不同需求。"
         meta={["一日经典宋文化线", "亲子轻松游", "夜游美食线"]}
