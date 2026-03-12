@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { AttractionHero } from "@/components/attractions/attraction-hero";
@@ -10,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { attractions } from "@/data/attractions";
 import { itineraries } from "@/data/itineraries";
 import { ItineraryCard } from "@/components/itineraries/itinerary-card";
+import { createMetadata } from "@/lib/metadata";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -19,22 +19,19 @@ export async function generateStaticParams() {
   return attractions.map((item) => ({ slug: item.slug }));
 }
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+export async function generateMetadata({ params }: PageProps) {
   const { slug } = await params;
   const attraction = attractions.find((item) => item.slug === slug);
   if (!attraction) {
     return { title: "景点不存在" };
   }
 
-  return {
+  return createMetadata({
     title: attraction.name,
     description: attraction.intro,
-    openGraph: {
-      title: `${attraction.name} | 汴京行旅`,
-      description: attraction.intro,
-      images: [attraction.heroImage]
-    }
-  };
+    path: `/attractions/${attraction.slug}`,
+    image: attraction.heroImage
+  });
 }
 
 function getRelatedItineraries(slug: string) {
@@ -64,7 +61,7 @@ export default async function AttractionDetailPage({ params }: PageProps) {
       </section>
       <section className="pb-12">
         <Container>
-          <div className="panel p-6 sm:p-8">
+          <div className="panel-strong p-6 sm:p-8">
             <SectionHeading title="交通与串联建议" description="如果你准备把这站放进行程里，下面这些提醒能让路线更顺。" />
             <div className="mt-6 grid gap-4 lg:grid-cols-2">
               <div className="rounded-[24px] bg-white/70 p-5 text-sm leading-7 text-[color:var(--muted)]">{attraction.transportTip}</div>
@@ -75,7 +72,10 @@ export default async function AttractionDetailPage({ params }: PageProps) {
       </section>
       <section className="pb-12">
         <Container>
-          <SectionHeading title="这站适合放进哪些路线里" description="如果不想从零拼行程，可以直接从下面的路线进入。" />
+          <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
+            <SectionHeading title="这站适合放进哪些路线里" description="如果不想从零拼行程，可以直接从下面的路线进入。" />
+            <Button asChild variant="secondary"><Link href="/itineraries">查看全部路线</Link></Button>
+          </div>
           <div className="mt-6 grid gap-6 lg:grid-cols-2">
             {relatedItineraries.map((item) => (
               <ItineraryCard key={item.slug} itinerary={item} />
@@ -90,7 +90,7 @@ export default async function AttractionDetailPage({ params }: PageProps) {
       </section>
       <section className="pb-16 sm:pb-20">
         <Container>
-          <div className="panel flex flex-col gap-5 px-8 py-8 sm:flex-row sm:items-center sm:justify-between sm:px-10">
+          <div className="panel-strong flex flex-col gap-5 px-8 py-8 sm:flex-row sm:items-center sm:justify-between sm:px-10">
             <div>
               <h2 className="ink-title text-3xl">下一步就看路线怎么接</h2>
               <p className="mt-2 text-sm leading-7 text-[color:var(--muted)]">把这站放进完整行程里，通常会比单独看景点更容易做决定。</p>

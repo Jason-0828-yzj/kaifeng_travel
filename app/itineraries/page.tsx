@@ -1,20 +1,17 @@
-import type { Metadata } from "next";
 import { PageHero } from "@/components/shared/page-hero";
 import { Container } from "@/components/shared/container";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { itineraries } from "@/data/itineraries";
 import { ItineraryCard } from "@/components/itineraries/itinerary-card";
 import { ItineraryTimeline } from "@/components/itineraries/itinerary-timeline";
+import { createMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata = createMetadata({
   title: "推荐路线",
   description: "用 1 日经典线、亲子轻松线和夜游美食线，帮你快速确定开封怎么玩。",
-  openGraph: {
-    title: "开封推荐路线 | 汴京行旅",
-    description: "三条开封精选路线，适合第一次到访、家庭出游和夜游爱好者。",
-    images: ["/images/kaifeng/hero/classic-route.svg"]
-  }
-};
+  path: "/itineraries",
+  image: "/images/kaifeng/hero/classic-route.svg"
+});
 
 export default function ItinerariesPage() {
   return (
@@ -40,7 +37,7 @@ export default function ItinerariesPage() {
           <div className="mt-8 space-y-8">
             {itineraries.map((item) => (
               <div key={item.slug} className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
-                <div className="panel p-6 sm:p-8">
+                <div className="panel-strong p-6 sm:p-8">
                   <h2 className="ink-title text-3xl">{item.title}</h2>
                   <p className="mt-3 text-sm leading-8 text-[color:var(--muted)]">{item.summary}</p>
                   <div className="mt-6 space-y-3 text-sm leading-7 text-[color:var(--muted)]">

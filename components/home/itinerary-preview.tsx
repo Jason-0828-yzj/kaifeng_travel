@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { itineraries } from "@/data/itineraries";
 import { Container } from "@/components/shared/container";
@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 
 export function ItineraryPreview() {
   return (
-    <section className="py-12 sm:py-16">
+    <section className="section-space">
       <Container>
         <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
           <SectionHeading

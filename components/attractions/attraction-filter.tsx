@@ -1,7 +1,7 @@
-﻿"use client";
+"use client";
 
 import { useDeferredValue, useMemo, useState } from "react";
-import { Search } from "lucide-react";
+import { RotateCcw, Search } from "lucide-react";
 import { attractionCategories } from "@/data/attractions";
 import type { Attraction } from "@/types/attraction";
 import { AttractionCard } from "@/components/attractions/attraction-card";
@@ -25,11 +25,30 @@ export function AttractionFilter({ attractions }: { attractions: Attraction[] })
 
   return (
     <div className="space-y-6">
-      <div className="panel p-5 sm:p-6">
-        <div className="grid gap-4 lg:grid-cols-[1fr_auto] lg:items-center">
-          <div className="relative">
-            <Search className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-[color:var(--muted)]" />
-            <Input value={query} onChange={(e) => setQuery(e.target.value)} className="pl-11" placeholder="搜索你想去的景点、体验或关键词" />
+      <div className="panel-strong p-5 sm:p-6">
+        <div className="grid gap-4 xl:grid-cols-[1fr_auto] xl:items-center">
+          <div className="space-y-4">
+            <div className="relative">
+              <Search className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-[color:var(--muted)]" />
+              <Input value={query} onChange={(e) => setQuery(e.target.value)} className="pl-11" placeholder="搜索景点、夜游体验或你关心的关键词" />
+            </div>
+            <div className="flex flex-wrap items-center gap-3 text-sm text-[color:var(--muted)]">
+              <span>共 {attractions.length} 个条目</span>
+              <span>当前显示 {filtered.length} 个</span>
+              {(query || category !== "all") ? (
+                <button
+                  type="button"
+                  onClick={() => {
+                    setQuery("");
+                    setCategory("all");
+                  }}
+                  className="inline-flex items-center gap-2 rounded-full bg-white/70 px-3 py-1.5 text-[color:var(--foreground)] transition hover:bg-white"
+                >
+                  <RotateCcw className="h-3.5 w-3.5" />
+                  清空筛选
+                </button>
+              ) : null}
+            </div>
           </div>
           <div className="flex flex-wrap gap-3">
             {attractionCategories.map((item) => (
@@ -39,7 +58,9 @@ export function AttractionFilter({ attractions }: { attractions: Attraction[] })
                 onClick={() => setCategory(item.value)}
                 className={cn(
                   "rounded-full px-4 py-2 text-sm transition",
-                  category === item.value ? "bg-[color:var(--primary)] text-[color:var(--primary-foreground)]" : "bg-white/80 text-[color:var(--muted)] hover:text-[color:var(--foreground)]"
+                  category === item.value
+                    ? "bg-[color:var(--primary)] text-[color:var(--primary-foreground)]"
+                    : "bg-white/80 text-[color:var(--muted)] hover:bg-white hover:text-[color:var(--foreground)]"
                 )}
               >
                 {item.label}
@@ -56,9 +77,9 @@ export function AttractionFilter({ attractions }: { attractions: Attraction[] })
           ))}
         </div>
       ) : (
-        <div className="panel flex min-h-56 flex-col items-center justify-center px-6 text-center">
-          <h3 className="ink-title text-2xl">还没找到匹配内容</h3>
-          <p className="mt-3 max-w-md text-sm leading-7 text-[color:var(--muted)]">可以试试更短的关键词，或者先切回“全部”筛选，看哪些景点更适合这次开封行程。</p>
+        <div className="panel-strong flex min-h-64 flex-col items-center justify-center px-6 text-center">
+          <h3 className="ink-title text-2xl">还没找到完全匹配的内容</h3>
+          <p className="mt-3 max-w-md text-sm leading-7 text-[color:var(--muted)]">可以试试更短的关键词，或者先切回“全部”筛选，再从夜游、美食片区或经典古迹里做取舍。</p>
         </div>
       )}
     </div>

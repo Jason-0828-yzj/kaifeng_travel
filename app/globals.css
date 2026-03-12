@@ -1,4 +1,4 @@
-﻿@import "tailwindcss";
+@import "tailwindcss";
 
 :root {
   --background: #f5efe6;
@@ -13,6 +13,7 @@
   --accent: #7b8b79;
   --ring: rgba(139, 46, 39, 0.35);
   --shadow: 0 24px 80px rgba(52, 36, 24, 0.08);
+  --shadow-strong: 0 26px 90px rgba(45, 27, 17, 0.14);
 }
 
 @theme inline {
@@ -65,14 +66,25 @@ h4 {
   letter-spacing: -0.02em;
 }
 
+@layer base {
+  p {
+    text-wrap: pretty;
+  }
+}
+
 @layer components {
   .shell {
     @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
   }
 
   .panel {
-    @apply rounded-[28px] border border-white/40 bg-[color:var(--card)] backdrop-blur-xl;
+    @apply rounded-[28px] border border-white/45 bg-[color:var(--card)] backdrop-blur-xl;
     box-shadow: var(--shadow);
+  }
+
+  .panel-strong {
+    @apply rounded-[32px] border border-white/50 bg-[color:var(--card-strong)] backdrop-blur-xl;
+    box-shadow: var(--shadow-strong);
   }
 
   .eyebrow {
@@ -81,5 +93,13 @@ h4 {
 
   .ink-title {
     @apply font-serif text-[color:var(--foreground)];
+  }
+
+  .section-space {
+    @apply py-12 sm:py-16 lg:py-20;
+  }
+
+  .editorial-grid {
+    @apply grid gap-6 lg:grid-cols-[1.05fr_0.95fr];
   }
 }

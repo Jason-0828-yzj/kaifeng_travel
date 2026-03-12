@@ -1,20 +1,17 @@
-import type { Metadata } from "next";
 import { MapPinned } from "lucide-react";
 import { PageHero } from "@/components/shared/page-hero";
 import { Container } from "@/components/shared/container";
 import { MapPlaceholder } from "@/components/shared/map-placeholder";
 import { faqs } from "@/data/faq";
 import { travelTipSections } from "@/data/city";
+import { createMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata = createMetadata({
   title: "出行指南",
   description: "集中查看怎么到开封、什么时候去、住哪里更方便，以及第一次来更适合怎么安排。",
-  openGraph: {
-    title: "开封出行指南 | 汴京行旅",
-    description: "适合第一次来开封的实用信息页。",
-    images: ["/images/kaifeng/hero/family-route.svg"]
-  }
-};
+  path: "/travel-tips",
+  image: "/images/kaifeng/hero/family-route.svg"
+});
 
 const groups = [
   { title: "怎么到开封", items: travelTipSections.arrivals },
@@ -43,7 +40,7 @@ export default function TravelTipsPage() {
           <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
             <div className="grid gap-5 sm:grid-cols-2">
               {groups.map((group) => (
-                <article key={group.title} className="panel p-6">
+                <article key={group.title} className="panel-strong p-6">
                   <h2 className="ink-title text-2xl">{group.title}</h2>
                   <div className="mt-4 space-y-3 text-sm leading-7 text-[color:var(--muted)]">
                     {group.items.map((item) => (
@@ -59,7 +56,7 @@ export default function TravelTipsPage() {
       </section>
       <section className="pb-16 sm:pb-20">
         <Container>
-          <div className="panel p-6 sm:p-8">
+          <div className="panel-strong p-6 sm:p-8">
             <h2 className="ink-title text-3xl">FAQ</h2>
             <div className="mt-6 grid gap-5 lg:grid-cols-2">
               {faqs.slice(0, 4).map((item) => (

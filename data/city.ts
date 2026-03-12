@@ -1,27 +1,37 @@
-﻿export const siteConfig = {
+export const siteConfig = {
   name: "汴京行旅",
+  shortName: "汴京行旅",
   title: "开封旅行指南",
   description:
     "以宋韵气息为线索，带你快速理解开封的必游景点、推荐路线、夜游体验与在地味道。",
-  siteUrl: "https://example.com",
-  ogImage: "/images/kaifeng/hero/kaifeng-hero-main.svg"
+  siteUrl: "https://kaifeng-travel.vercel.app",
+  ogImage: "/images/kaifeng/hero/kaifeng-hero-main.svg",
+  location: "中国·河南·开封",
+  launchNote: "适合作为作品集展示与静态部署的中文旅行网站前端"
 };
 
 export const navigation = [
-  { href: "/", label: "首页" },
-  { href: "/attractions", label: "景点" },
-  { href: "/itineraries", label: "推荐路线" },
-  { href: "/food", label: "美食" },
-  { href: "/travel-tips", label: "出行指南" },
-  { href: "/about-kaifeng", label: "认识开封" }
+  { href: "/", label: "首页", description: "快速建立开封旅行印象" },
+  { href: "/attractions", label: "景点", description: "筛选必去景点与夜游片区" },
+  { href: "/itineraries", label: "推荐路线", description: "一日游与两日节奏建议" },
+  { href: "/food", label: "美食", description: "把味道放进行程里" },
+  { href: "/travel-tips", label: "出行指南", description: "住宿、季节与到达方式" },
+  { href: "/about-kaifeng", label: "认识开封", description: "更短、更现代的城市叙事" }
 ];
 
 export const homeHero = {
   title: "一城汴水，半卷宋风",
   subtitle:
     "开封不是只适合匆匆打卡的古城。白天可以沿着皇城遗韵与寺塔古迹慢慢展开，夜里又会在灯影、水岸与夜市烟火里变得鲜活起来。",
+  editorialNote:
+    "适合第一次来、也适合只安排 1 到 2 天的人。先定路线，再决定哪些时段留给古迹、夜景和吃。",
   primaryCta: { href: "/itineraries", label: "开始规划行程" },
-  secondaryCta: { href: "/attractions", label: "查看必去景点" }
+  secondaryCta: { href: "/attractions", label: "查看必去景点" },
+  stats: [
+    { label: "推荐停留", value: "1-2 天" },
+    { label: "核心体验", value: "景点 + 夜游 + 美食" },
+    { label: "适合人群", value: "初次到访 / 亲子 / 情侣" }
+  ]
 };
 
 export const cityHighlights = [
@@ -39,6 +49,21 @@ export const cityHighlights = [
     title: "夜游烟火",
     description:
       "真正让人记住开封的，往往是傍晚以后。夜市、灯光、水岸和演出，把古都的另一面点亮。"
+  }
+];
+
+export const homePlanningSteps = [
+  {
+    title: "先定行程天数",
+    description: "如果只有一天，优先经典景点和夜市；如果能住一晚，就把夜游与晨间慢走一起收进来。"
+  },
+  {
+    title: "再选旅行偏好",
+    description: "想看宋风氛围、历史古迹，还是想把更多时间留给夜景和吃，决定会完全不同。"
+  },
+  {
+    title: "最后补实用信息",
+    description: "把住宿片区、交通衔接和返程时间一并看一下，路线会更落地，也更容易执行。"
   }
 ];
 
@@ -132,7 +157,8 @@ export const footerContent = {
   statement:
     "汴京行旅以现代旅行视角整理开封体验，帮助第一次到访的游客更快找到适合自己的节奏。",
   quickLinks: navigation,
-  contact: "contact@example.com",
-  social: ["微博占位", "小红书占位", "微信服务号占位"],
+  contactLabel: "内容与合作",
+  contact: "欢迎在部署后替换为你的邮箱、公众号或作品集入口",
+  social: ["微博 / 小红书 / 微信服务号入口可后续接入", "当前版本保留静态前端展示导向"],
   copyright: "Copyright © 2026 汴京行旅"
 };
