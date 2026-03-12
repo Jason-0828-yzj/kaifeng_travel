@@ -1,0 +1,24 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="1000" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5C2A1F"/>
+      <stop offset="1" stop-color="#C28E59"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1180 180) rotate(137.917) scale(520 360)">
+      <stop stop-color="#F9E7B5" stop-opacity="0.72"/>
+      <stop offset="1" stop-color="#F9E7B5" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <rect width="1600" height="1000" fill="url(#glow)"/>
+  <path d="M0 720C164 662.667 319 634 465 634C717 634 871 822 1110 822C1302.67 822 1466 755.333 1600 622V1000H0V720Z" fill="rgba(255,248,236,0.18)"/>
+  <path d="M0 612C140 524 298 480 474 480C706 480 836 618 1088 618C1272 618 1442.67 558 1600 438" stroke="rgba(255,248,236,0.18)" stroke-width="2" stroke-dasharray="10 12"/>
+  <rect x="94" y="86" width="204" height="42" rx="21" fill="rgba(255,248,236,0.16)"/>
+  <text x="126" y="113" fill="#FFF8EC" font-family="Noto Sans SC, Microsoft YaHei, sans-serif" font-size="22" letter-spacing="5">KAIFENG GUIDE</text>
+  <text x="94" y="720" fill="#FFF8EC" font-family="Noto Serif SC, STSong, serif" font-size="92" font-weight="600">清明上河园</text>
+  <text x="94" y="780" fill="rgba(255,248,236,0.82)" font-family="Noto Sans SC, Microsoft YaHei, sans-serif" font-size="30">景点占位图，可替换为园区街景与演艺照片。</text>
+  <circle cx="1310" cy="235" r="90" fill="rgba(255,248,236,0.12)"/>
+  <circle cx="1310" cy="235" r="62" stroke="rgba(255,248,236,0.26)" stroke-width="2"/>
+  <rect x="1205" y="604" width="220" height="182" rx="30" fill="rgba(255,248,236,0.12)"/>
+  <path d="M1250 724C1298 676 1353 633 1415 595" stroke="rgba(255,248,236,0.36)" stroke-width="4" stroke-linecap="round"/>
+</svg>
