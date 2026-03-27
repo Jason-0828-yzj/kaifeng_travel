@@ -1,5 +1,6 @@
 ﻿import Link from "next/link";
 import { footerContent } from "@/data/city";
+import { photoCredits } from "@/data/photo-credits";
 import { Container } from "@/components/shared/container";
 
 export function SiteFooter() {
@@ -33,6 +34,25 @@ export function SiteFooter() {
               </div>
             </div>
           </div>
+
+          <details className="mt-8 rounded-[24px] border border-[color:var(--border)] bg-white/55 p-5 text-sm text-[color:var(--muted)]">
+            <summary className="cursor-pointer font-medium text-[color:var(--foreground)]">图片来源</summary>
+            <p className="mt-3 leading-7">本版已替换部分景点实拍图，来源均为 Wikimedia Commons；对应许可与作者信息请以各来源页为准。</p>
+            <div className="mt-4 flex flex-wrap gap-3">
+              {photoCredits.map((item) => (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rounded-full border border-[color:var(--border)] bg-white/80 px-3 py-1.5 transition hover:text-[color:var(--foreground)]"
+                >
+                  {item.label} · {item.source}
+                </a>
+              ))}
+            </div>
+          </details>
+
           <div className="mt-10 border-t border-[color:var(--border)] pt-6 text-sm text-[color:var(--muted)]">{footerContent.copyright}</div>
         </div>
       </Container>

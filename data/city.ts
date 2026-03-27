@@ -6,7 +6,7 @@ export const siteConfig = {
   description:
     "以宋韵气息为线索，带你快速理解开封的必游景点、推荐路线、夜游体验与在地味道。",
   siteUrl: normalizedSiteUrl,
-  ogImage: "/images/kaifeng/hero/kaifeng-hero-main.svg"
+  ogImage: "/images/kaifeng/hero/kaifeng-hero-main.jpg"
 };
 
 export const navigation = [
@@ -144,3 +144,4 @@ export const footerContent = {
   notes: ["内容以行程判断与旅行灵感为主", "票务、演出与开放安排请以景区官方信息为准"],
   copyright: "Copyright © 2026 汴京行旅"
 };
+

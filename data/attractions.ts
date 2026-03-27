@@ -21,9 +21,9 @@ export const attractions: Attraction[] = [
       "旺季人流较多，舒适的浏览方式是避开正午高峰。",
       "夜间演出请提前确认场次。"
     ],
-    heroImage: "/images/kaifeng/attractions/qingming.svg",
+    heroImage: "/images/kaifeng/attractions/photos/qingming-riverside-garden.jpg",
     gallery: [
-      "/images/kaifeng/attractions/qingming.svg",
+      "/images/kaifeng/attractions/photos/qingming-riverside-garden.jpg",
       "/images/kaifeng/hero/night-river.svg"
     ],
     relatedSlugs: ["dragon-pavilion", "kaifeng-prefecture", "bian-river-night-tour"],
@@ -45,8 +45,8 @@ export const attractions: Attraction[] = [
     transportTip: "适合与清明上河园、铁塔公园同线安排。",
     highlights: ["视野开阔", "适合慢走与拍照", "与湖景结合感强"],
     tips: ["如果同行有老人或孩子，这里会比高强度步行景点更轻松。", "春秋两季的体感通常最好。"],
-    heroImage: "/images/kaifeng/attractions/dragon-pavilion.svg",
-    gallery: ["/images/kaifeng/attractions/dragon-pavilion.svg"],
+    heroImage: "/images/kaifeng/attractions/photos/dragon-pavilion.jpg",
+    gallery: ["/images/kaifeng/attractions/photos/dragon-pavilion.jpg"],
     relatedSlugs: ["iron-pagoda", "qingming-riverside-garden", "city-wall-walk"],
     featured: true
   },
@@ -66,8 +66,8 @@ export const attractions: Attraction[] = [
     transportTip: "更适合与龙亭或大相国寺拼成半日文化线。",
     highlights: ["地标性古塔", "历史感强", "适合安静游览"],
     tips: ["适合留一点时间在周边慢走，而不是只拍照即离开。", "夏季中午较晒，建议避开正午。"],
-    heroImage: "/images/kaifeng/attractions/iron-pagoda.svg",
-    gallery: ["/images/kaifeng/attractions/iron-pagoda.svg"],
+    heroImage: "/images/kaifeng/attractions/photos/iron-pagoda.jpg",
+    gallery: ["/images/kaifeng/attractions/photos/iron-pagoda.jpg"],
     relatedSlugs: ["dragon-pavilion", "great-xiangguo-temple"],
     featured: true
   },
@@ -87,8 +87,8 @@ export const attractions: Attraction[] = [
     transportTip: "与清明上河园、鼓楼夜市衔接较自然。",
     highlights: ["府衙空间体验", "适合了解历史故事", "与湖区动线顺畅"],
     tips: ["如果当天还计划夜游，建议不要把前半段排得太满。", "旺季游览节奏可能偏快，留出机动时间更从容。"],
-    heroImage: "/images/kaifeng/attractions/kaifeng-prefecture.svg",
-    gallery: ["/images/kaifeng/attractions/kaifeng-prefecture.svg"],
+    heroImage: "/images/kaifeng/attractions/photos/kaifeng-prefecture.jpg",
+    gallery: ["/images/kaifeng/attractions/photos/kaifeng-prefecture.jpg"],
     relatedSlugs: ["qingming-riverside-garden", "gulou-night-market", "bian-river-night-tour"],
     featured: true
   },
@@ -108,8 +108,8 @@ export const attractions: Attraction[] = [
     transportTip: "适合作为城市轻松游和二日行程的补充点。",
     highlights: ["节奏安静", "适合历史文化爱好者", "与城区串联方便"],
     tips: ["建议保持更轻声的游览节奏。", "可与周边美食或老街短暂停留搭配。"],
-    heroImage: "/images/kaifeng/attractions/xiangguo-temple.svg",
-    gallery: ["/images/kaifeng/attractions/xiangguo-temple.svg"],
+    heroImage: "/images/kaifeng/attractions/photos/great-xiangguo-temple.jpg",
+    gallery: ["/images/kaifeng/attractions/photos/great-xiangguo-temple.jpg"],
     relatedSlugs: ["iron-pagoda", "gulou-night-market"],
     featured: true
   },
@@ -129,9 +129,9 @@ export const attractions: Attraction[] = [
     transportTip: "适合接在开封府、汴河夜游或市中心散步之后。",
     highlights: ["夜晚氛围浓", "适合尝多样小吃", "行程收尾感很好"],
     tips: ["可以少量多次点单，留出尝试空间。", "节假日晚间人流较密集，建议提早一些到达。"],
-    heroImage: "/images/kaifeng/attractions/gulou-night-market.svg",
+    heroImage: "/images/kaifeng/attractions/photos/gulou-night-market.jpg",
     gallery: [
-      "/images/kaifeng/attractions/gulou-night-market.svg",
+      "/images/kaifeng/attractions/photos/gulou-night-market.jpg",
       "/images/kaifeng/food/night-market.svg"
     ],
     relatedSlugs: ["bian-river-night-tour", "kaifeng-prefecture"],
@@ -192,3 +192,4 @@ export const attractionCategories = [
   { label: "漫步公园", value: "park" },
   { label: "美食片区", value: "food-area" }
 ] as const;
+

@@ -92,7 +92,7 @@ export function HeroSection() {
               <div className="relative h-[500px] overflow-hidden rounded-[26px] sm:h-[580px]">
                 <motion.div className="absolute inset-0" style={{ y: atmosphereY }}>
                   <Image
-                    src="/images/kaifeng/hero/kaifeng-hero-main.svg"
+                    src="/images/kaifeng/hero/kaifeng-hero-main.jpg"
                     alt="开封旅行主视觉"
                     fill
                     className="object-cover"
@@ -164,3 +164,4 @@ export function HeroSection() {
     </motion.section>
   );
 }
+
