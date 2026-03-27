@@ -2,7 +2,7 @@
   {
     label: "清明上河园",
     source: "Wikimedia Commons",
-    href: "https://commons.wikimedia.org/wiki/File:%E6%B8%85%E6%98%8E%E4%B8%8A%E6%B2%B3%E5%9B%AD%E5%9B%BE%E7%89%87.jpg"
+    href: "https://commons.wikimedia.org/wiki/File:%E5%BC%80%E5%B0%81%E6%B8%85%E6%98%8E%E4%B8%8A%E6%B2%B3%E5%9B%BE%E9%A3%8E%E5%85%89_-_panoramio_(2).jpg"
   },
   {
     label: "龙亭",
@@ -30,3 +30,4 @@
     href: "https://commons.wikimedia.org/wiki/File:%E9%BC%93%E6%A5%BC%E5%A4%9C%E5%B8%82_-_panoramio.jpg"
   }
 ] as const;
+
