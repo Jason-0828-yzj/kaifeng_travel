@@ -20,6 +20,7 @@ export function AttractionCard({ attraction }: { attraction: Attraction }) {
   const imageX = useTransform(smoothX, [-0.5, 0.5], [-10, 10]);
   const imageY = useTransform(smoothY, [-0.5, 0.5], [-8, 8]);
   const overlayOpacity = useTransform(smoothY, [-0.5, 0.5], [0.16, 0.32]);
+  const isQingming = attraction.slug === "qingming-riverside-garden";
 
   function handlePointerMove(event: React.PointerEvent<HTMLElement>) {
     if (prefersReducedMotion || event.pointerType !== "mouse") return;
@@ -72,6 +73,11 @@ export function AttractionCard({ attraction }: { attraction: Attraction }) {
               </motion.div>
             ))}
           </div>
+          {isQingming ? (
+            <div className="absolute bottom-4 left-4 rounded-[18px] border border-white/20 bg-[rgba(38,26,18,0.62)] px-4 py-2 text-sm font-medium text-white backdrop-blur-md">
+              清明上河园
+            </div>
+          ) : null}
         </div>
         <div className="flex flex-1 flex-col space-y-4 p-5 sm:p-6">
           <div className="space-y-2">
